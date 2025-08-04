@@ -1,0 +1,5 @@
+a=int(input("valor de a "))
+b=int(input("valor de b "))
+c=int(input("valor de c "))
+v=((-b+(((b**2)-((4*a)*c))**(1/2)))/(2*a))
+print ("resultado es",v) 

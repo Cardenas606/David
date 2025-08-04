@@ -1,0 +1,6 @@
+a=int(input("valor de a"))
+b=int(input("valor de b"))
+c=int(input("valor de c"))
+d=int(input("valor de d"))
+x=a+((a+(a+b)/(c+d)/(a+(a+b))))
+print (x)
