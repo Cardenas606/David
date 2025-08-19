@@ -1,0 +1,119 @@
+##pto 13
+
+distancia = float(input("Ingrese la distancia (km): "))
+v1 = float(input("Ingrese la velocidad del vehículo detrás (km/h): "))
+v2 = float(input("Ingrese la velocidad del vehículo delante (km/h): "))
+
+tiempo_horas = distancia / (v1 - v2)
+tiempo_minutos = tiempo_horas * 60
+
+print(f"El vehículo más rápido alcanzará al otro en {tiempo_minutos} minutos")
+
+##pto 14
+
+nombre = input("Ingrese su nombre: ")
+apellido1 = input("Ingrese su primer apellido: ")
+apellido2 = input("Ingrese su segundo apellido: ")
+
+print(f"Iniciales: {nombre[0]}{apellido1[0]}{apellido2[0]}")
+
+##pto 15
+
+correctas = int(input("Ingrese número de respuestas correctas: "))
+incorrectas = int(input("Ingrese número de respuestas incorrectas: "))
+blanco = int(input("Ingrese número de respuestas en blanco: "))
+
+nota = (correctas * 2) + (incorrectas * -1) + (blanco * 0)
+print(f"La nota final es: {nota}")
+
+##pto 16
+
+import math
+
+a = float(input("Ingrese a: "))
+b = float(input("Ingrese b: "))
+c = float(input("Ingrese c: "))
+
+discriminante = b**2 - 4*a*c
+
+if discriminante < 0:
+    print("No tiene soluciones reales")
+else:
+    x1 = (-b + math.sqrt(discriminante)) / (2*a)
+    x2 = (-b - math.sqrt(discriminante)) / (2*a)
+    print(f"Las soluciones son: x1={x1}, x2={x2}")
+
+##pto 17
+
+peso = float(input("Ingrese su peso en kg: "))
+altura = float(input("Ingrese su altura en cm: "))
+edad = int(input("Ingrese su edad en años: "))
+
+tmb_hombres = (10*peso) + (6.25*altura) - (5*edad) + 5
+tmb_mujeres = (10*peso) + (6.25*altura) - (5*edad) - 161
+
+print(f"TMB Hombres: {tmb_hombres}")
+print(f"TMB Mujeres: {tmb_mujeres}")
+
+##pto 18
+
+peso = float(input("Ingrese su peso en kg: "))
+altura = float(input("Ingrese su altura en metros: "))
+
+imc = peso / (altura**2)
+print(f"Su IMC es: {imc}")
+
+##pto 19
+
+nombre = input("Ingrese el nombre del empleado: ")
+sueldo = float(input("Ingrese el sueldo base: "))
+
+prestamo = 15000000
+meses = 60
+cuota_fija = prestamo / meses
+interes = cuota_fija * 0.016
+seguro = cuota_fija * 0.005
+
+cuota_total = cuota_fija + interes + seguro
+sueldo_final = sueldo - cuota_total
+
+print(f"Empleado: {nombre}")
+print(f"Sueldo base: {sueldo}")
+print(f"Cuota mensual: {cuota_fija}")
+print(f"Interés: {interes}")
+print(f"Seguro: {seguro}")
+print(f"Total cuota: {cuota_total}")
+print(f"Sueldo después del descuento: {sueldo_final}")
+
+##pto 20
+
+nombre = input("Ingrese su nombre: ")
+cedula = input("Ingrese su cÃŠdula: ")
+ventas = int(input("Ingrese la cantidad de ventas: "))
+
+if ventas < 3:
+    print("El empleado debe realizar mÃ­nimo 3 ventas")
+else:
+    sueldo_base = float(input("Ingrese el sueldo base: "))
+    total = sueldo_base + (sueldo_base * 0.05 * ventas)
+    print(f"Empleado: {nombre}, CÃŠdula: {cedula}, Sueldo total: {total}")
+
+##pto 21
+
+nombre = input("Ingrese el nombre del estudiante: ")
+cedula = input("Ingrese la cédula: ")
+programa = input("Ingrese el programa académico: ")
+
+matricula = 2500000
+derechos = matricula * 0.05
+votacion = derechos * 0.0125
+iva = (matricula - derechos) * 0.02
+
+print("Factura Electrónica:")
+print(f"Nombre: {nombre}")
+print(f"Cédula: {cedula}")
+print(f"Programa: {programa}")
+print(f"Matrícula: {matricula}")
+print(f"Derechos complementarios: {derechos}")
+print(f"Descuento por votación: {votacion}")
+print(f"IVA: {iva}")
